@@ -31,10 +31,18 @@ jobs:
     #   run: go test -v main_test.go 
       
   
-  build:
+  build-hello:
     needs: test
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
     - name: Build
       run: go build -v hello.go
+  
+  # build-greeting:
+  #   needs: test
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #   - uses: actions/checkout@v3
+  #   - name: Build
+  #     run: go build -v hello.go
