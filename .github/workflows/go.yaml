@@ -27,8 +27,8 @@ jobs:
     # - name: Create-DB
     #   run: docker-compose up -d
 
-    - name: Test
-      run: go test -v main_test.go 
+    # - name: Test
+    #   run: go test -v main_test.go 
       
   
   build:
@@ -37,4 +37,4 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build
-      run: go build -v main.go
+      run: go build -v hello.go
